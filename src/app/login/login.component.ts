@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-// import { AuthService } from '../services/auth-serivce/auth.service';
+import { AuthService } from '../services/authService/auth.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   isAuthenticated: boolean = false;
 
   constructor(
-    // private authService: AuthService,
+    private authService: AuthService,
     private router: ActivatedRoute,
     private redirect: Router,
     private toastr: ToastrService
@@ -37,17 +37,17 @@ export class LoginComponent implements OnInit {
       password: this.f.password.value,
     };
 
-    // this.authService.userLogin(data).subscribe(
-    //   (response) => {
-    //     // this.toastr.success('Login successfull');
-    //     this.redirect.navigate(['home']);
-    //     this.isAuthenticated = true;
-    //     console.log(response);
-    //   },
-    //   (error) => {
-    //     this.toastr.error('Login unsuccessfull');
-    //     this.toastr.info('Please check username and password');
-    //   }
-    // );
+    this.authService.userLogin(data).subscribe(
+      (response) => {
+        // this.toastr.success('Login successfull');
+        this.redirect.navigate(['home']);
+        this.isAuthenticated = true;
+        console.log(response);
+      },
+      (error) => {
+        this.toastr.error('Login unsuccessfull');
+        this.toastr.info('Please check username and password');
+      }
+    );
   }
 }
