@@ -10,6 +10,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+  user;
   myForm: FormGroup;
   isAuthenticated: boolean = false;
 
@@ -31,6 +32,27 @@ export class LoginComponent implements OnInit {
     return this.myForm.controls;
   }
 
+  getUser() {
+    this.authService.getUser().subscribe(
+      (data) => {
+        if (data) {
+          this.user = data;
+          this.toastr.success('Login successfull');
+          console.log(this.user);
+          if (this.user.is_admin) {
+            this.redirect.navigate(['admin']);
+          } else {
+            this.redirect.navigate(['home']);
+          }
+        }
+      },
+      (error) => {
+        console.log(error.error);
+        this.toastr.error('Your are not logged in');
+      }
+    );
+  }
+
   onSubmit() {
     const data = {
       email: this.f.email.value,
@@ -39,10 +61,9 @@ export class LoginComponent implements OnInit {
 
     this.authService.userLogin(data).subscribe(
       (response) => {
-        // this.toastr.success('Login successfull');
-        this.redirect.navigate(['home']);
         this.isAuthenticated = true;
-        console.log(response);
+
+        this.getUser();
       },
       (error) => {
         this.toastr.error('Login unsuccessfull');
