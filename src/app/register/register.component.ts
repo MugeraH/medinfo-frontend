@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-// import { AuthService } from '../services/auth-serivce/auth.service';
+import { AuthService } from '../services/authService/auth.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
@@ -13,7 +13,7 @@ export class RegisterComponent implements OnInit {
   myForm: FormGroup;
 
   constructor(
-    // private authService: AuthService,
+    private authService: AuthService,
     private router: ActivatedRoute,
     private redirect: Router,
     private toastr: ToastrService
@@ -36,20 +36,22 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     const data = {
       username: this.f.username.value,
+      firstname: this.f.firstname.value,
+      lastname: this.f.lastname.value,
       email: this.f.email.value,
       password: this.f.password.value,
     };
 
-    // this.authService.userRegister(data).subscribe(
-    //   (response) => {
-    //     this.toastr.success('Registration successfull');
-    //     this.redirect.navigate(['login']);
-    //   },
-    //   (error) => {
-    //     console.log(error);
-    //     this.toastr.error('Registration unsuccessfull');
-    //     this.toastr.info(error);
-    //   }
-    // );
+    this.authService.userRegister(data).subscribe(
+      (response) => {
+        this.toastr.success('Registration successfull');
+        this.redirect.navigate(['login']);
+      },
+      (error) => {
+        console.log(error);
+        this.toastr.error('Registration unsuccessfull');
+        this.toastr.info(error);
+      }
+    );
   }
 }
