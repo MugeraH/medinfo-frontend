@@ -16,6 +16,8 @@ import { AddIllnessInfoComponent } from './add-illness-info/add-illness-info.com
 import { AddDrugInfoComponent } from './add-drug-info/add-drug-info.component';
 import { IllnessInfoComponent } from './illness-info/illness-info.component';
 import { DrugsInfoComponent } from './drugs-info/drugs-info.component';
+import { SearchComponent } from './search/search.component';
+import { PostComponent } from './post/post.component';
 
 
 @NgModule({
@@ -30,6 +32,8 @@ import { DrugsInfoComponent } from './drugs-info/drugs-info.component';
     AddDrugInfoComponent,
     IllnessInfoComponent,
     DrugsInfoComponent,
+    SearchComponent,
+    PostComponent,
   ],
   imports: [
     BrowserModule,
