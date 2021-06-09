@@ -12,6 +12,10 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AdminComponent } from './admin/admin.component';
+import { AddIllnessInfoComponent } from './add-illness-info/add-illness-info.component';
+import { AddDrugInfoComponent } from './add-drug-info/add-drug-info.component';
+import { IllnessInfoComponent } from './illness-info/illness-info.component';
+import { DrugsInfoComponent } from './drugs-info/drugs-info.component';
 
 
 @NgModule({
@@ -22,6 +26,10 @@ import { AdminComponent } from './admin/admin.component';
     RegisterComponent,
     NavbarComponent,
     AdminComponent,
+    AddIllnessInfoComponent,
+    AddDrugInfoComponent,
+    IllnessInfoComponent,
+    DrugsInfoComponent,
   ],
   imports: [
     BrowserModule,
