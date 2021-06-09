@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.myForm = new FormGroup({
-      username: new FormControl(''),
+      email: new FormControl(''),
       password: new FormControl(''),
     });
   }
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     const data = {
-      username: this.f.username.value,
+      email: this.f.email.value,
       password: this.f.password.value,
     };
 

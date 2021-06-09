@@ -14,11 +14,17 @@ const userUrl = 'http://localhost:8000/auth/user';
 export class AuthService {
   constructor(private http: HttpClient) {}
 
-  userLogin(data: { username: string; password: string }) {
+  userLogin(data: { email: string; password: string }) {
     return this.http.post(loginUrl, data);
   }
 
-  userRegister(data: { username: string; email: string; password: string }) {
+  userRegister(data: {
+    username: string;
+    firstname: string;
+    lastname: string;
+    email: string;
+    password: string;
+  }) {
     return this.http.post(registerUrl, data);
   }
 
