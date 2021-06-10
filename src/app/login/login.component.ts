@@ -47,8 +47,8 @@ export class LoginComponent implements OnInit {
         }
       },
       (error) => {
-        console.log(error.error);
-        this.toastr.error('Your are not logged in');
+        console.log(error);
+        this.toastr.error('Encountered an error please check credentials');
       }
     );
   }
@@ -61,10 +61,11 @@ export class LoginComponent implements OnInit {
 
     this.authService.userLogin(data).subscribe(
       (response) => {
-        this.isAuthenticated = true;
-        this.redirect.navigate(['home']);
+        console.log(response);
 
+        this.isAuthenticated = true;
         // this.getUser();
+        this.redirect.navigate(['home']);
       },
       (error) => {
         this.toastr.error('Login unsuccessfull');

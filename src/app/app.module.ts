@@ -20,6 +20,7 @@ import { SearchComponent } from './search/search.component';
 import { PostComponent } from './post/post.component';
 import { ReplyComponent } from './reply/reply.component';
 import { SearchDrugComponent } from './search-drug/search-drug.component';
+import { ViewIllnessComponent } from './view-illness/view-illness.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { SearchDrugComponent } from './search-drug/search-drug.component';
     PostComponent,
     ReplyComponent,
     SearchDrugComponent,
+    ViewIllnessComponent,
   ],
   imports: [
     BrowserModule,

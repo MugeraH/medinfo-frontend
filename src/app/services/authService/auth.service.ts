@@ -12,6 +12,7 @@ const userUrl = 'http://localhost:8000/auth/user';
   providedIn: 'root',
 })
 export class AuthService {
+ 
   constructor(private http: HttpClient) {}
 
   userLogin(data: { email: string; password: string }) {

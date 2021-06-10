@@ -20,6 +20,10 @@ export class IllnessService {
     return this.http.get(`${baseUrl}/${id}`);
   }
 
+  getSearchIllness(search_term: any): Observable<any> {
+    return this.http.get(`${baseUrl}/${search_term}`);
+  }
+
   addIllness(data: {
     illnessname: string;
     description: string;
