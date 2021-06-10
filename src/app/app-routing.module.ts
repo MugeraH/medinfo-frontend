@@ -13,6 +13,8 @@ import { PostComponent } from './post/post.component';
 import { ReplyComponent } from './reply/reply.component';
 import { ViewIllnessComponent } from './view-illness/view-illness.component';
 import { ViewDrugComponent } from './view-drug/view-drug.component';
+import { SearchDrugComponent } from './search-drug/search-drug.component';
+
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login' },
@@ -21,6 +23,7 @@ const routes: Routes = [
 
   { path: 'home', component: HomeComponent },
   { path: 'search', component: SearchComponent },
+  { path: 'searchDrug', component: SearchDrugComponent },
   { path: 'post', component: PostComponent },
 
   { path: 'admin', component: AdminComponent },
