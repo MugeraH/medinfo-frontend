@@ -62,8 +62,9 @@ export class LoginComponent implements OnInit {
     this.authService.userLogin(data).subscribe(
       (response) => {
         this.isAuthenticated = true;
+        this.redirect.navigate(['admin']);
 
-        this.getUser();
+        // this.getUser();
       },
       (error) => {
         this.toastr.error('Login unsuccessfull');

@@ -1,3 +1,40 @@
 <app-navbar></app-navbar>
 
-<p>add-drug-info works!</p>
+<div class="container">
+  <div class="form mt-4">
+    <h2>Add business</h2>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="business-name">Business Name</label>
+        <input
+          type="text"
+          formControlName="business_name"
+          class="form-control"
+          id="business-name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Business Email</label>
+        <input
+          type="email"
+          class="form-control"
+          formControlName="business_email"
+          id="email"
+          aria-describedby="emailHelp"
+        />
+      </div>
+      <div class="form-group">
+        <label for="about">Description</label>
+        <textarea
+          type="text"
+          formControlName="about_business"
+          class="form-control"
+          id="about"
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+
