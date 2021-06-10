@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 
 const baseUrl = 'http://localhost:8000/api/illness';
 
+
 @Injectable({
   providedIn: 'root',
 })

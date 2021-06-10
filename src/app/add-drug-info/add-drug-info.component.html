@@ -2,39 +2,58 @@
 
 <div class="container">
   <div class="form mt-4">
-    <h2>Add business</h2>
+    <h2>Add New Drug Infromation</h2>
     <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
-        <label for="business-name">Business Name</label>
+        <label for="drug_name">Drug Name</label>
         <input
           type="text"
-          formControlName="business_name"
+          formControlName="drug_name"
           class="form-control"
-          id="business-name"
+          id="drug_name"
         />
       </div>
       <div class="form-group">
-        <label for="email">Business Email</label>
-        <input
-          type="email"
-          class="form-control"
-          formControlName="business_email"
-          id="email"
-          aria-describedby="emailHelp"
-        />
-      </div>
-      <div class="form-group">
-        <label for="about">Description</label>
+        <label for="description">Description</label>
         <textarea
           type="text"
-          formControlName="about_business"
+          formControlName="description"
           class="form-control"
-          id="about"
+          id="description"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="usage_information">Usage Infromation</label>
+        <textarea
+          type="text"
+          formControlName="usage_information"
+          class="form-control"
+          id="usage_information"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="side_effects">Side effects</label>
+        <textarea
+          type="text"
+          formControlName="side_effects"
+          class="form-control"
+          id="side_effects"
         ></textarea>
       </div>
 
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <div class="form-group form-check">
+        <input
+          type="checkbox"
+          formControlName="overCounter"
+          class="form-check-input"
+          id="overCounter"
+        />
+        <label class="form-check-label" for="overCounter"
+          >Require prescription</label
+        >
+      </div>
+
+      <button type="submit" class="btn btn-success">Submit</button>
     </form>
   </div>
 </div>
-

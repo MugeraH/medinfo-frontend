@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { IllnessService } from '../services/illnessSerivce/illness.service';
+import { DrugsService } from '../services/drugsService/drugs.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
@@ -13,16 +13,19 @@ export class AddDrugInfoComponent implements OnInit {
   myForm: FormGroup;
 
   constructor(
-    private addIllnessService: IllnessService,
+    private addDrugService: DrugsService,
     private router: ActivatedRoute,
     private redirect: Router,
     private toastr: ToastrService
   ) {}
+ 
   ngOnInit(): void {
     this.myForm = new FormGroup({
-      business_name: new FormControl(''),
-      business_email: new FormControl(''),
-      about_business: new FormControl(''),
+      drug_name: new FormControl(''),
+      description: new FormControl(''),
+      usage_information: new FormControl(''),
+      side_effects: new FormControl(''),
+      overCounter: new FormControl(''),
     });
   }
 
@@ -32,25 +35,23 @@ export class AddDrugInfoComponent implements OnInit {
 
   onSubmit() {
     const data = {
-      business_name: this.f.business_name.value,
-      business_email: this.f.business_email.value,
-      about_business: this.f.about_business.value,
-      neighbourhood: this.router.snapshot.paramMap.get('id'),
+      drug_name: this.f.drug_name.value,
+      description: this.f.description.value,
+      usage_information: this.f.usage_information.value,
+      side_effects: this.f.side_effects.value,
+      overCounter: this.f.overCounter.value,
     };
 
-    // this.addIllnessService.addIllness(data).subscribe(
-    //   (response) => {
-    //     console.log(response);
+    this.addDrugService.addDrug(data).subscribe(
+      (response) => {
+        console.log(response);
 
-    //     this.toastr.success('New Business saved successfully');
-    //     this.redirect.navigate([
-    //       '/hood',
-    //       this.router.snapshot.paramMap.get('id'),
-    //     ]);
-    //   },
-    //   (error) => {
-    //     console.log(error);
-    //   }
-    // );
+        this.toastr.success('New Drug saved successfully');
+        this.redirect.navigate(['/admin']);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 }
