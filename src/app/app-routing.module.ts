@@ -11,6 +11,8 @@ import { DrugsInfoComponent } from './drugs-info/drugs-info.component';
 import { SearchComponent } from './search/search.component';
 import { PostComponent } from './post/post.component';
 import { ReplyComponent } from './reply/reply.component';
+import { ViewIllnessComponent } from './view-illness/view-illness.component';
+import { ViewDrugComponent } from './view-drug/view-drug.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login' },
@@ -25,7 +27,10 @@ const routes: Routes = [
   { path: 'addIllness', component: AddIllnessInfoComponent },
   { path: 'addDrugInfo', component: AddDrugInfoComponent },
   { path: 'listIllnesses', component: IllnessInfoComponent },
+  { path: 'viewIllness/:id', component: ViewIllnessComponent },
+
   { path: 'listDrugs', component: DrugsInfoComponent },
+  { path: 'viewDrug/:id', component: ViewDrugComponent },
   { path: 'reply', component: ReplyComponent },
 ];
 

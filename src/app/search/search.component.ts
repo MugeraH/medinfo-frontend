@@ -15,7 +15,7 @@ export class SearchComponent implements OnInit {
   illnesses;
   noData: boolean = false;
   constructor(
-    private addIllnessService: IllnessService,
+    private illnessService: IllnessService,
     private router: ActivatedRoute,
     private redirect: Router,
     private toastr: ToastrService
@@ -36,7 +36,7 @@ export class SearchComponent implements OnInit {
       this.toastr.info('Please enter search term');
       return;
     }
-    this.addIllnessService.getSearchIllness(this.search_term).subscribe(
+    this.illnessService.getSearchIllness(this.search_term).subscribe(
       (data) => {
         console.log(data);
         if (data.length === 0) {
@@ -51,6 +51,6 @@ export class SearchComponent implements OnInit {
   }
 
   viewIllness(id: any) {
-           this.redirect.navigate(['/hood', id]);
+    this.redirect.navigate(['/viewIllness', id]);
   }
 }

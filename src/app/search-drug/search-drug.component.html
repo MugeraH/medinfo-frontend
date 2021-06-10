@@ -1,18 +1,37 @@
 <app-navbar></app-navbar>
 <div class="container-fluid mt-5">
-  <div class="form-wrapper">
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Search Illness" />
-      <div class="input-group-append">
-        <button
-          class="btn btn-outline-success"
-          type="submit"
-          id="button-addon2"
-        >
-          Search
-        </button>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="form-wrapper">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          required
+          formControlName="search_term"
+          class="form-control"
+          placeholder="Search Illness"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-success"
+            type="submit"
+            id="button-addon2"
+          >
+            Search
+          </button>
+        </div>
       </div>
     </div>
+  </form>
+
+  <div class="results" *ngIf="Drugs">
+    <p class="h4 text-center">Drugs</p>
+    <div class="result" *ngFor="let drug of Drugs" (click)="viewDrug(drug.id)">
+      <p class="h4">{{ drug.name }}</p>
+    </div>
   </div>
-  <div class="results"></div>
+  <div class="results" *ngIf="noData">
+    <p class="h5 text-center mt-10">
+      There is currently no data for {{ search_term }}
+    </p>
+  </div>
 </div>
