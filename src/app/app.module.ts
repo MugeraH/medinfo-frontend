@@ -18,6 +18,7 @@ import { IllnessInfoComponent } from './illness-info/illness-info.component';
 import { DrugsInfoComponent } from './drugs-info/drugs-info.component';
 import { SearchComponent } from './search/search.component';
 import { PostComponent } from './post/post.component';
+import { ReplyComponent } from './reply/reply.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { PostComponent } from './post/post.component';
     DrugsInfoComponent,
     SearchComponent,
     PostComponent,
+    ReplyComponent,
   ],
   imports: [
     BrowserModule,

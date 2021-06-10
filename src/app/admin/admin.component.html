@@ -1,51 +1,37 @@
-<nav class="navbar navbar-expand-lg bg-primary">
-  <div class="container-fluid">
-    <a class="navbar-brand text-white" href="/hoods">MedInfo</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <!-- *ngIf="isAuthenticated" -->
-        <li class="nav-item">
-          <a class="nav-link active text-white" aria-current="page" href="/home"
-            >Home</a
-          >
-        </li>
-        <li class="nav-item">
-          <a routerLink="/login" class="nav-link text-white">
-            <!-- (click)="logout()" -->
-            Logout
-          </a>
-        </li>
-      </ul>
+<app-navbar></app-navbar>
 
-      <!-- <ul class="navbar-nav ml-auto" *ngIf="!isAuthenticated">
-        <li class="nav-item">
-          <a
-            class="nav-link active text-white"
-            aria-current="page"
-            routerLink="/login"
-            >Login</a
-          >
-        </li>
+<div class="container-fluid p-5">
+  <div class="action-wrapper">
+    <div class="card" style="width: 18rem">
+      <div class="card-body" routerLink="/addIllness">
+        <h5 class="card-title">Add Illness Infromation </h5>
 
-        <li class="nav-item">
-          <a class="nav-link text-white" routerLink="/register"> Register </a>
-        </li>
-      </ul> -->
+        <!-- <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p> -->
+      </div>
+    </div>
+    <div class="card" style="width: 18rem" routerLink="/addDrugInfo">
+      <div class="card-body">
+        <h5 class="card-title">Add Drug Information</h5>
+
+        <!-- <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p> -->
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem" routerLink="/reply">
+      <div class="card-body">
+        <h5 class="card-title">Reply to Post</h5>
+
+        <!-- <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p> -->
+      </div>
     </div>
   </div>
-</nav>
-
-<div class="container-fluid">
-  <h2>Admin</h2>
 </div>
