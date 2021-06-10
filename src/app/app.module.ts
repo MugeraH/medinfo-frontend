@@ -19,6 +19,7 @@ import { DrugsInfoComponent } from './drugs-info/drugs-info.component';
 import { SearchComponent } from './search/search.component';
 import { PostComponent } from './post/post.component';
 import { ReplyComponent } from './reply/reply.component';
+import { SearchDrugComponent } from './search-drug/search-drug.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { ReplyComponent } from './reply/reply.component';
     SearchComponent,
     PostComponent,
     ReplyComponent,
+    SearchDrugComponent,
   ],
   imports: [
     BrowserModule,

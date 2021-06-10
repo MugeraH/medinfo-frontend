@@ -1,0 +1,8 @@
+.form-wrapper{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form-wrapper input{
+    height:60px;
+}

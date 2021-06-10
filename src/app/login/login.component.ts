@@ -62,7 +62,7 @@ export class LoginComponent implements OnInit {
     this.authService.userLogin(data).subscribe(
       (response) => {
         this.isAuthenticated = true;
-        this.redirect.navigate(['admin']);
+        this.redirect.navigate(['home']);
 
         // this.getUser();
       },
