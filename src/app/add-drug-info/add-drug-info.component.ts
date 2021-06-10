@@ -38,19 +38,19 @@ export class AddDrugInfoComponent implements OnInit {
       neighbourhood: this.router.snapshot.paramMap.get('id'),
     };
 
-    this.addIllnessService.addIllness(data).subscribe(
-      (response) => {
-        console.log(response);
+    // this.addIllnessService.addIllness(data).subscribe(
+    //   (response) => {
+    //     console.log(response);
 
-        this.toastr.success('New Business saved successfully');
-        this.redirect.navigate([
-          '/hood',
-          this.router.snapshot.paramMap.get('id'),
-        ]);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+    //     this.toastr.success('New Business saved successfully');
+    //     this.redirect.navigate([
+    //       '/hood',
+    //       this.router.snapshot.paramMap.get('id'),
+    //     ]);
+    //   },
+    //   (error) => {
+    //     console.log(error);
+    //   }
+    // );
   }
 }

@@ -9,8 +9,10 @@
   border-radius: 5px;
 }
 
-
-
-.container-fluid{
+.container-fluid {
   height: 100%;
 }
+textarea {
+  height: 120px !important;
+}
+

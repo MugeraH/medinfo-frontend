@@ -34,9 +34,9 @@ export class AddIllnessInfoComponent implements OnInit {
   onSubmit() {
     const data = {
       illnessname: this.f.illnessname.value,
-      description: this.f.business_email.value,
+      description: this.f.description.value,
       symptoms: this.f.symptoms.value,
-      recommendation: this.f.symptoms.value,
+      recommendation: this.f.recommendation.value,
     };
 
     this.addIllnessService.addIllness(data).subscribe(
