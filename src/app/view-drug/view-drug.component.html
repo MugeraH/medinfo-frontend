@@ -4,23 +4,27 @@
   <div class="card-wrapper">
     <div class="first">
       <div class="name">
-        <p>Name</p>
+        <p>{{ drug.drug_name }}</p>
+        <span class="h5">{{ drug.type }}</span>
       </div>
       <div class="desc">
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto
-          officiis perferendis temporibus numquam voluptatem quod.
+          {{ drug.description }}
         </p>
       </div>
     </div>
     <div class="second">
       <div class="symptoms text-center">
-        <p class="h4">l</p>
-        <p class="h5 m-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, consectetur. Eos mollitia dolor consequuntur.</p>
+        <p class="h4">Usage Inforamtion</p>
+        <p class="h5 m-3">
+          {{ drug.usage_information }}
+        </p>
       </div>
       <div class="recommendations text-center">
-         <p class="h4">l</p>
-        <p class="h5 m-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, nemo.</p>
+        <p class="h4">Side Effecs</p>
+        <p class="h5 m-3">
+          {{ drug.side_effects }}
+        </p>
       </div>
     </div>
   </div>

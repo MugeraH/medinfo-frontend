@@ -1,0 +1,56 @@
+.card-wrapper {
+  background-color: blueviolet;
+  width: 700px;
+  margin: 25px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.first {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.name {
+  flex: 2;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  border-right: 3px solid black;
+}
+.name p {
+ 
+  color: rgb(0, 247, 255);
+  font-size: 35px;
+}
+.name span{
+  color: #fff;
+}
+.desc {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.second {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.symptoms {
+  border-top: 3px solid black;
+  padding: 15px 10px;
+  margin-top: 10px;
+}
+.recommendations {
+  border-top: 3px solid black;
+  padding: 15px 10px;
+  margin-top: 10px;
+}

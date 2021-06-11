@@ -1,2 +1,19 @@
 <app-navbar></app-navbar>
-<p>reply works!</p>
+  <div class="form-wrapper">
+      <h3 class="text-center">Ask A doctor</h3>
+      <div class="form-container">
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <textarea
+              type="text"
+              formControlName="post"
+              class="form-control"
+              id="post"
+              placeholder="Make Inquiry"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Post</button>
+        </form>
+      </div>
+    </div>

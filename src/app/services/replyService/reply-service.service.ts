@@ -3,31 +3,24 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
-const baseUrl = 'http://localhost:8000/api/post';
+const baseUrl = 'http://localhost:8000/api/reply';
 
 @Injectable({
   providedIn: 'root',
 })
-export class PostsService {
+export class ReplyServiceService {
   constructor(private http: HttpClient) {}
 
-  getAllPosts(id: any): Observable<any> {
-    return this.http.get(`${baseUrl}`);
-  }
-
-  getPostDetail(id: any): Observable<any> {
+ 
+  getPostReply(id: any): Observable<any> {
     return this.http.get(`${baseUrl}/${id}`);
   }
 
-  getUserPost(id: any): Observable<any> {
-    return this.http.get(`${baseUrl}/${id}`);
-  }
-
-  addPost(data: { post: string }) {
+  addReply(data: { post: string }) {
     return this.http.post(baseUrl, data);
   }
 
-  updatePost(
+  updateReply(
     id: any,
     data: {
       post: string;
@@ -36,7 +29,7 @@ export class PostsService {
     return this.http.put(`${baseUrl}/${id}`, data);
   }
 
-  deletePost(id: any) {
+  deleteReply(id: any) {
     return this.http.delete(`${baseUrl}/${id}`);
   }
 }
