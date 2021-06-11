@@ -8,7 +8,7 @@ const baseUrl = 'http://localhost:8000/api/reply';
 @Injectable({
   providedIn: 'root',
 })
-export class ReplyServiceService {
+export class ReplyService {
   constructor(private http: HttpClient) {}
 
  

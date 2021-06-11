@@ -11,7 +11,7 @@ const baseUrl = 'http://localhost:8000/api/post';
 export class PostsService {
   constructor(private http: HttpClient) {}
 
-  getAllPosts(id: any): Observable<any> {
+  getAllPosts(): Observable<any> {
     return this.http.get(`${baseUrl}`);
   }
 

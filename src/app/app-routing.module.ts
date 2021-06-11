@@ -14,6 +14,7 @@ import { ReplyComponent } from './reply/reply.component';
 import { ViewIllnessComponent } from './view-illness/view-illness.component';
 import { ViewDrugComponent } from './view-drug/view-drug.component';
 import { SearchDrugComponent } from './search-drug/search-drug.component';
+import { PostViewComponent } from './post-view/post-view.component';
 
 
 const routes: Routes = [
@@ -35,6 +36,7 @@ const routes: Routes = [
   { path: 'listDrugs', component: DrugsInfoComponent },
   { path: 'viewDrug/:id', component: ViewDrugComponent },
   { path: 'reply', component: ReplyComponent },
+  { path: 'postView', component: PostViewComponent },
 ];
 
 @NgModule({

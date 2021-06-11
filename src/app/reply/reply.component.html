@@ -1,19 +1,63 @@
 <app-navbar></app-navbar>
-  <div class="form-wrapper">
-      <h3 class="text-center">Ask A doctor</h3>
+
+<div class="container-fluid m-4">
+  <div class="main-wrapper">
+    <div class="post">
+      <p class="h4 text-center">Post</p>
+    </div>
+    <div class="form-wrapper">
       <div class="form-container">
         <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
             <textarea
               type="text"
-              formControlName="post"
+              formControlName="reply"
               class="form-control"
               id="post"
-              placeholder="Make Inquiry"
+              placeholder="Reply to post"
             ></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary">Post</button>
+          <button type="submit" class="btn btn-primary">Reply</button>
         </form>
       </div>
     </div>
+
+    <div class="replies-wrapper">
+      <div class="reply-item">
+        <div class="header">date</div>
+        <div class="reply-container">
+          <p class="reply">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <div class="actions">
+            <button class="btn btn-outline-primary mr-3">Update</button>
+            <button class="btn btn-danger">Delete</button>
+          </div>
+        </div>
+      </div>
+      <div class="reply-item">
+        <div class="header">date</div>
+        <div class="reply-container">
+          <p class="reply">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <div class="actions">
+            <button class="btn btn-outline-primary mr-3">Update</button>
+            <button class="btn btn-danger">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="reply-container">
+        *ngFor= "let reply in replies"
+        <p class="reply">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <div class="actions">
+          <button class="btn btn-outline-primary mr-3">Update</button>
+          <button class="btn btn-danger">Delete</button>
+        </div>
+      </div> -->
