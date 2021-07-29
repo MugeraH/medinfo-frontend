@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'search', component: SearchComponent },
   { path: 'searchDrug', component: SearchDrugComponent },
-  { path: 'post', component: PostComponent },
+  { path: 'post/:id', component: PostComponent },
 
   { path: 'admin', component: AdminComponent },
   { path: 'addIllness', component: AddIllnessInfoComponent },

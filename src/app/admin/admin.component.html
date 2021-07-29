@@ -1,36 +1,40 @@
 <app-navbar></app-navbar>
 
 <div class="container-fluid p-5">
+  <h2 class="m-4">Welcome Dr.</h2>
+
   <div class="action-wrapper">
-    <div class="card" style="width: 18rem">
-      <div class="card-body" routerLink="/addIllness">
-        <h5 class="card-title">Add Illness Infromation</h5>
-
-        <!-- <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p> -->
+    <div class="row">
+      <div class="col-md-4">
+        <div class="img">
+          <img src="../../assets/images/malaria.png" alt="" />
+        </div>
+        <div class="card" style="width: 18rem">
+          <div class="card-body" routerLink="/addIllness">
+            <h4 class="card-title">Add Illness Infromation</h4>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="card" style="width: 18rem" routerLink="/addDrugInfo">
-      <div class="card-body">
-        <h5 class="card-title">Add Drug Information</h5>
 
-        <!-- <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p> -->
+      <div class="col-md-4">
+        <div class="img">
+          <img src="../../assets/images/medicine.png" alt="" />
+        </div>
+        <div class="card" style="width: 18rem" routerLink="/addDrugInfo">
+          <div class="card-body">
+            <h4 class="card-title">Add Drug Information</h4>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="card" style="width: 18rem" routerLink="/postView">
-      <div class="card-body">
-        <h5 class="card-title">Reply to Post</h5>
-
-        <!-- <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p> -->
+      <div class="col-md-4">
+        <div class="img">
+          <img src="../../assets/images/social-media.png" alt="" />
+        </div>
+        <div class="card" style="width: 18rem" routerLink="/postView">
+          <div class="card-body">
+            <h4 class="card-title">Reply to Post</h4>
+          </div>
+        </div>
       </div>
     </div>
   </div>

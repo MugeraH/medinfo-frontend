@@ -1,7 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json',
+  }),
+  withCredentials: true,
+};
 
 const loginUrl = 'http://localhost:8000/auth/login';
 const logoutUrl = 'http://localhost:8000/auth/logout';
@@ -12,7 +18,6 @@ const userUrl = 'http://localhost:8000/auth/user';
   providedIn: 'root',
 })
 export class AuthService {
- 
   constructor(private http: HttpClient) {}
 
   userLogin(data: { email: string; password: string }) {
@@ -30,7 +35,7 @@ export class AuthService {
   }
 
   getUser() {
-    return this.http.get(userUrl, { withCredentials: true });
+    return this.http.get(userUrl, httpOptions);
   }
 
   logout() {

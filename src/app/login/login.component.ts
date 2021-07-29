@@ -32,26 +32,7 @@ export class LoginComponent implements OnInit {
     return this.myForm.controls;
   }
 
-  getUser() {
-    this.authService.getUser().subscribe(
-      (data) => {
-        if (data) {
-          this.user = data;
-          this.toastr.success('Login successfull');
-          console.log(this.user);
-          if (this.user.is_admin) {
-            this.redirect.navigate(['admin']);
-          } else {
-            this.redirect.navigate(['home']);
-          }
-        }
-      },
-      (error) => {
-        console.log(error);
-        this.toastr.error('Encountered an error please check credentials');
-      }
-    );
-  }
+
 
   onSubmit() {
     const data = {
@@ -60,12 +41,11 @@ export class LoginComponent implements OnInit {
     };
 
     this.authService.userLogin(data).subscribe(
+   
       (response) => {
         console.log(response);
-
-        this.isAuthenticated = true;
-        // this.getUser();
         this.redirect.navigate(['home']);
+      
       },
       (error) => {
         this.toastr.error('Login unsuccessfull');

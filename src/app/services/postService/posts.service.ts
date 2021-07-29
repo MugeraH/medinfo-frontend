@@ -20,10 +20,10 @@ export class PostsService {
   }
 
   getUserPost(id: any): Observable<any> {
-    return this.http.get(`${baseUrl}/${id}`);
+    return this.http.get(`${baseUrl}/user/${id}`);
   }
 
-  addPost(data: { post: string }) {
+  addPost(data: { post: string; user: number }) {
     return this.http.post(baseUrl, data);
   }
 

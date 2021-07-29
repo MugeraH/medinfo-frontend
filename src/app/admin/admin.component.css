@@ -2,12 +2,32 @@
   display: flex;
 
   justify-content: space-between;
+  width: 100%;
 }
 
+.action-wrapper .row {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.action-wrapper .row .col-md-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.action-wrapper .row .col-md-4 .img {
+  height: 150px;
+}
+.action-wrapper .row .col-md-4 .img img {
+  height: 100%;
+  margin: 20px 0px;
+}
 .card {
+  margin: 40px 0px;
   text-align: center;
   cursor: pointer;
-  -webkit-box-shadow: -1px 0px 6px -1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -1px 0px 6px -1px rgba(0, 0, 0, 0.75);
-  box-shadow: -1px 0px 6px -1px rgba(0, 0, 0, 0.75);
+  background: #04051d;
+  color: #fff;
 }

@@ -1,9 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  background: #030637;
+  overflow-x: hidden;
+  width: 100vw;
+  /* background: -webkit-linear-gradient(
+    to right,
+    #01065e,
+    #030637
+  );
+  background: linear-gradient(
+    to right,
+    #01065e,
+    #030637
+  ); */
+}
+
 .form {
   width: 500px;
   margin: 10px auto;
-  -webkit-box-shadow: -1px 0px 6px -1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -1px 0px 6px -1px rgba(0, 0, 0, 0.75);
-  box-shadow: -1px 0px 6px -1px rgba(0, 0, 0, 0.75);
+  background: #04051d;
 
   padding: 20px;
   border-radius: 5px;
@@ -15,4 +36,3 @@
 textarea {
   height: 120px !important;
 }
-

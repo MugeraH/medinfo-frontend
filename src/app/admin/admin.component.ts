@@ -25,9 +25,10 @@ export class AdminComponent implements OnInit {
     this.authService.getUser().subscribe(
       (data) => {
         if (data) {
+
           this.user = data;
-          this.toastr.success('Login successfull');
-          console.log(this.user);
+         
+         
           if (this.user.is_admin) {
             this.redirect.navigate(['admin']);
           } else {

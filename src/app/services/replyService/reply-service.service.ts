@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
-const baseUrl = 'http://localhost:8000/api/reply';
+const baseUrl = 'https://medinfo-hm.herokuapp.com/api/reply';
 
 @Injectable({
   providedIn: 'root',

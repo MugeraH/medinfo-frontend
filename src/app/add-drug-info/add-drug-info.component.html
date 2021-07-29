@@ -3,7 +3,7 @@
 <div class="container">
   <div class="form mt-4">
     <h2>Add New Drug Infromation</h2>
-    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
       <div class="form-group">
         <label for="drug_name">Drug Name</label>
         <input
@@ -39,6 +39,19 @@
           class="form-control"
           id="side_effects"
         ></textarea>
+      </div>
+
+      <div class="form-group ">
+        <input
+          type="file"
+          formControlName="image"
+          class="form-control"
+          id="image"
+          hidden
+        />
+        <label class="btn btn-outline-light m-0" for="image"
+          >+ DrugImage</label
+        >
       </div>
 
       <div class="form-group form-check">
