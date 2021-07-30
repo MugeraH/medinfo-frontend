@@ -10,14 +10,14 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <span class="text-white">
+      <span class="text-white ">
         <i class="fas fa-bars"></i>
       </span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link active text-white" aria-current="page">
+          <a class="nav-link active text-white h5" aria-current="page">
             Hi
             <span style="text-transform: capitalize">{{
               user.username
@@ -25,21 +25,21 @@
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link active text-white" aria-current="page" href="/home"
+          <a class="nav-link active text-white h5" aria-current="page" href="/home"
             >Home</a
           >
         </li>
 
         <li class="nav-item">
           <a
-            class="nav-link active text-white"
+            class="nav-link active text-white h5"
             aria-current="page"
             href="/profile"
             >Profile</a
           >
         </li>
         <li class="nav-item">
-          <a routerLink="/login" class="nav-link text-white" (click)="logout()">
+          <a routerLink="/login" class="nav-link text-white h5" (click)="logout()">
             Logout
           </a>
         </li>
