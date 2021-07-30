@@ -1,5 +1,5 @@
 .card-wrapper {
-    background: #04051d;
+  background: #04051d;
   width: 700px;
   margin: 25px auto;
   border-radius: 10px;
@@ -48,4 +48,19 @@
   border-top: 3px solid rgb(247, 245, 245);
   padding: 15px 10px;
   margin-top: 10px;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.heading p{
+    color: rgb(0, 247, 255);
+   
+}
+
+.heading img {
+  height: 70px;
 }

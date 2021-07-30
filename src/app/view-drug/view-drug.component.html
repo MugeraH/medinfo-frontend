@@ -5,12 +5,13 @@
     <div class="first">
       <div class="name">
         <p>{{ drug.drug_name }}</p>
-        <span class="h5">{{ drug.type }}</span>
+        <span class="h6">{{ drug.type }}</span>
       </div>
       <div class="desc">
         <p>
           {{ drug.description }}
         </p>
+        <span class="text-muted">OverCounter: {{ drug.overCounter }}</span>
       </div>
     </div>
     <div class="second">
@@ -21,36 +22,40 @@
         </p>
       </div>
       <div class="symptoms text-center">
-        <p class="h4">Usage Inforamtion</p>
+        <p class="h4">Side Effects</p>
         <p class="h5 m-3">
-          {{ drug.usage_information }}
+          {{ drug.side_effects }}
         </p>
       </div>
       <div class="recommendations text-center">
         <div class="row">
           <div class="col-md-6">
-            <p class="h4">Side Effecs</p>
+            <p class="h4">SA: Driving</p>
+            <img src="../../assets/images/hands.png" alt="" />
             <p class="h5 m-3">
-              {{ drug.side_effects }}
+              {{ drug.safety_advice_driving }}
             </p>
           </div>
           <div class="col-md-6">
             <p class="h4">SA: Alcohol</p>
+            <img src="../../assets/images/beer.png" alt="" />
             <p class="h5 m-3">
-              {{ drug.side_effects }}
+              {{ drug.safety_advice_alcohol }}
             </p>
           </div>
-          <hr>
+          <hr />
           <div class="col-md-6">
             <p class="h4">SA: Breast Feeding</p>
+            <img src="../../assets/images/breastfeeding.png" alt="" />
             <p class="h5 m-3">
-              {{ drug.side_effects }}
+              {{ drug.safety_advice_pregnancy }}
             </p>
           </div>
           <div class="col-md-6">
             <p class="h4">SA: Pregnancy</p>
+            <img src="../../assets/images/maternity.png" alt="" />
             <p class="h5 m-3">
-              {{ drug.side_effects }}
+              {{ drug.safety_advice_breast_feeding }}
             </p>
           </div>
         </div>

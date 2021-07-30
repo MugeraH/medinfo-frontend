@@ -7,10 +7,10 @@
   display: flex;
   flex-direction: column;
 }
-hr{
+hr {
   width: 100%;
   padding: 1px;
-  background:black;
+  background: white;
 }
 
 .first {
@@ -22,23 +22,23 @@ hr{
 .name {
   flex: 2;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-right: 3px solid black;
+  text-align: center;
 }
 .name p {
- 
   color: rgb(0, 247, 255);
-  font-size: 35px;
+  font-size: 40px;
 }
-.name span{
+.name span {
   color: #fff;
 }
 .desc {
   flex: 3;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  /* align-items: center; */
   justify-content: center;
   padding: 20px;
   font-size: 18px;
@@ -50,12 +50,16 @@ hr{
   padding: 15px;
 }
 .symptoms {
-  border-top: 3px solid black;
+  border-top: 3px solid white;
   padding: 15px 10px;
   margin-top: 10px;
 }
 .recommendations {
-  border-top: 3px solid black;
+  border-top: 3px solid white;
   padding: 15px 10px;
   margin-top: 10px;
+}
+
+.col-md-6 img{
+  height:100px;
 }

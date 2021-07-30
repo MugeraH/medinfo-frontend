@@ -1,6 +1,67 @@
 <app-navbar></app-navbar>
 
-<div class="container-fluid p-5">
+<div class="container-fluid">
+  <section class="intro one">
+    <h2 class="intro-text text-center p-3 m-2">
+      MedInfo gathers information from the best medical minds and makes it
+      available for everyone
+    </h2>
+
+    <div class="img">
+      <img src="../../assets/images/consulting.png" alt="" />
+    </div>
+
+    <button class="btn btn-outline-light mt5 btn-lg" (click)="scroll(target)">
+      Explore
+    </button>
+  </section>
+  <section #target class="actions two">
+ 
+    <div class="action-wrapper">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="img">
+            <img src="../../assets/images/malaria.png" alt="" />
+          </div>
+          <div class="card" style="width: 18rem">
+            <div class="card-body" routerLink="/search">
+              <h5 class="card-title">Search Illness Infromation</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="img">
+            <img src="../../assets/images/medicine.png" alt="" />
+          </div>
+          <div class="card" style="width: 18rem" routerLink="/searchDrug">
+            <div class="card-body">
+              <h5 class="card-title">Search Drug information</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="img">
+            <img src="../../assets/images/social-media.png" alt="" />
+          </div>
+          <div
+            class="card"
+            style="width: 18rem"
+            (click)="viewPost()"
+            [routerLink]="['/post']"
+            [queryParams]="{ id: user.id }"
+          >
+            <div class="card-body">
+              <h5 class="card-title">Ask a doctor</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- <div class="container-fluid p-5">
   <h3 class="text-right">Welcome {{ user.username }}</h3>
 
   <div class="intro mt-5">
@@ -42,44 +103,6 @@
   </div>
 
   <div #target class="action-wrapper">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="img">
-          <img src="../../assets/images/malaria.png" alt="" />
-        </div>
-        <div class="card" style="width: 18rem">
-          <div class="card-body" routerLink="/search">
-            <h5 class="card-title">Search Illness Infromation</h5>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="img">
-          <img src="../../assets/images/medicine.png" alt="" />
-        </div>
-        <div class="card" style="width: 18rem" routerLink="/searchDrug">
-          <div class="card-body">
-            <h5 class="card-title">Search Drug information</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="img">
-          <img src="../../assets/images/social-media.png" alt="" />
-        </div>
-        <div
-          class="card"
-          style="width: 18rem"
-          (click)="viewPost()"
-          [routerLink]="['/post']"
-          [queryParams]="{ id: user.id }"
-        >
-          <div class="card-body">
-            <h5 class="card-title">Ask a doctor</h5>
-          </div>
-        </div>
-      </div>
-    </div>
+ 
   </div>
-</div>
+</div> -->
