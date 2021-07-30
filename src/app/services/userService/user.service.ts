@@ -9,7 +9,7 @@ const httpOptions = {
 };
 
 
-const userUrl = 'http://localhost:8000/auth/user';
+const userUrl = 'https://medinfo-api.herokuapp.com/auth/user';
 
 @Injectable({
   providedIn: 'root',

@@ -9,10 +9,10 @@ const httpOptions = {
   withCredentials: true,
 };
 
-const loginUrl = 'http://localhost:8000/auth/login';
-const logoutUrl = 'http://localhost:8000/auth/logout';
-const registerUrl = 'http://localhost:8000/auth/register';
-const userUrl = 'http://localhost:8000/auth/user';
+const loginUrl = 'https://medinfo-api.herokuapp.com/auth/login';
+const logoutUrl = 'https://medinfo-api.herokuapp.com/auth/logout';
+const registerUrl = 'https://medinfo-api.herokuapp.com/auth/register';
+const userUrl = 'https://medinfo-api.herokuapp.com/auth/user';
 
 @Injectable({
   providedIn: 'root',
