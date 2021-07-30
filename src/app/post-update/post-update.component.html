@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="form-wrapper">
+    <h3 class="text-center">Update Post</h3>
+    <div class="form-container">
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <textarea
+            type="text"
+            formControlName="post"
+            class="form-control"
+            id="post"
+            placeholder="Make Inquiry"
+            [(ngModel)]="post.post"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success">Post</button>
+      </form>
+    </div>
+  </div>
+</div>

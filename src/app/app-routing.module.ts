@@ -18,6 +18,7 @@ import { PostViewComponent } from './post-view/post-view.component';
 import { PostReplyComponent } from './post-reply/post-reply.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { PostUpdateComponent } from './post-update/post-update.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login' },
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'searchDrug', component: SearchDrugComponent },
   { path: 'post/:id', component: PostComponent },
   { path: 'post_reply/:id', component: PostReplyComponent },
+  { path: 'post_update/:id', component: PostUpdateComponent },
 
   { path: 'admin', component: AdminComponent },
   { path: 'addIllness', component: AddIllnessInfoComponent },

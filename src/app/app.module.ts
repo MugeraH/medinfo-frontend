@@ -26,6 +26,7 @@ import { PostViewComponent } from './post-view/post-view.component';
 import { PostReplyComponent } from './post-reply/post-reply.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { PostUpdateComponent } from './post-update/post-update.component';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { UpdateProfileComponent } from './update-profile/update-profile.componen
     PostReplyComponent,
     ProfileComponent,
     UpdateProfileComponent,
+    PostUpdateComponent,
   ],
   imports: [
     BrowserModule,

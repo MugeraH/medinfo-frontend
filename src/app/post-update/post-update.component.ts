@@ -6,16 +6,16 @@ import { AuthService } from '../services/authService/auth.service';
 import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-post',
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css'],
+  selector: 'app-post-update',
+  templateUrl: './post-update.component.html',
+  styleUrls: ['./post-update.component.css'],
 })
-export class PostComponent implements OnInit {
+export class PostUpdateComponent implements OnInit {
   user;
-  user_id;
+  post_id;
   myForm: FormGroup;
   post;
-  posts;
+
   noData: boolean = false;
   constructor(
     private postService: PostsService,
@@ -26,33 +26,32 @@ export class PostComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.user_id = this.route.snapshot.paramMap.get('id');
+    this.post_id = this.route.snapshot.paramMap.get('id');
     this.myForm = new FormGroup({
       post: new FormControl(''),
     });
     this.getUser();
 
-    this.getUserPosts(this.user_id);
-    console.log(this.posts);
+    this.getPost(this.post_id);
   }
 
   get f() {
     return this.myForm.controls;
   }
   onSubmit() {
-    console.log(this.user);
+    let id = this.post.id;
 
     const data = {
       post: this.f.post.value,
       user: this.user.id,
     };
 
-    this.postService.addPost(data).subscribe(
+    this.postService.updatePost(id, data).subscribe(
       (response) => {
         console.log(response);
 
-        this.toastr.success('New Post saved successfully');
-        window.location.reload();
+        this.toastr.success('Post update successfully');
+        this.redirect.navigate(['post', this.user.id]);
         this.post = '';
       },
       (error) => {
@@ -60,49 +59,26 @@ export class PostComponent implements OnInit {
       }
     );
   }
-  viewReply(id: any) {
-    this.redirect.navigate(['/post_reply', id]);
-  }
-  update(id: any) {
-    this.redirect.navigate(['/post_update', id]);
-  }
-
-  getUserPosts(id: any) {
-    this.postService.getUserPost(id).subscribe(
-      (data) => {
-        this.posts = data;
-        console.log(this.posts);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-  }
-
-  delete(id: any) {
-    this.postService.deletePost(id).subscribe(
-      (response) => {
-        this.toastr.success('Post deleted successfully');
-        window.location.reload();
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-  }
-
   getUser() {
     this.authService.getUser().subscribe(
       (data) => {
         if (data) {
           this.user = data;
-
-          console.log(this.user);
         }
       },
       (error) => {
         console.log(error);
-        this.toastr.error('Encountered an error ');
+      }
+    );
+  }
+
+  getPost(id: any) {
+    this.postService.getPostDetail(id).subscribe(
+      (data) => {
+        this.post = data;
+      },
+      (error) => {
+        console.log(error);
       }
     );
   }

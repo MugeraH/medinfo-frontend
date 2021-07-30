@@ -26,17 +26,29 @@
         <div class="posts-wrapper mt-3">
           <h3 class="text-center">My Inquiries</h3>
           <div class="overall-post-container" *ngFor="let post of posts">
-            <div class="post" (click)="viewReply(post.id)">
+            <div class="post">
               <span class="h6">{{ post.date | date }}</span>
               <div class="post-container">
                 <div class="">
                   <p class="m-0 p-0">{{ post.post }}?</p>
                 </div>
                 <div class="actions">
-                  <button class="btn btn-outline-primary mr-3 btn-sm">
+                  <button
+                    class="btn btn-outline-success mr-3 btn-sm"
+                    (click)="viewReply(post.id)"
+                  >
+                    view
+                  </button>
+                  <button
+                    class="btn btn-outline-primary mr-3 btn-sm"
+                    (click)="update(post.id)"
+                  >
                     Update
                   </button>
-                  <button class="btn btn-danger btn-sm" (click)="delete()">
+                  <button
+                    class="btn btn-danger btn-sm"
+                    (click)="delete(post.id)"
+                  >
                     Delete
                   </button>
                 </div>
