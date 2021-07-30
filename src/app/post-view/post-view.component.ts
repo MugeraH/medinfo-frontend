@@ -9,21 +9,22 @@ import { PostsService } from '../services/postService/posts.service';
 })
 export class PostViewComponent implements OnInit {
   posts;
-  constructor(private postService: PostsService) {}
+  constructor(private postService: PostsService, private redirect: Router) {}
 
-getPosts(){
-   this.postService.getAllPosts().subscribe(
-     (data) => {
-     this.posts = data
-
+  getPosts() {
+    this.postService.getAllPosts().subscribe(
+      (data) => {
+        this.posts = data;
      
-     },
-     (error) => {
-       console.log(error);
-     }
-   );
-
-}
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+  reply(id) {
+    this.redirect.navigate(['/reply', id]);
+  }
 
   ngOnInit(): void {
     this.getPosts();

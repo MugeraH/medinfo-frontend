@@ -11,11 +11,10 @@ const baseUrl = 'http://localhost:8000/api/reply';
 export class ReplyService {
   constructor(private http: HttpClient) {}
 
- 
-
-  addReply(data: { post: string }) {
+  addReply(data: { reply: string,post:number,user:number }) {
     return this.http.post(baseUrl, data);
   }
+
 
   updateReply(
     id: any,

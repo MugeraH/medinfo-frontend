@@ -42,7 +42,7 @@ const routes: Routes = [
 
   { path: 'listDrugs', component: DrugsInfoComponent },
   { path: 'viewDrug/:id', component: ViewDrugComponent },
-  { path: 'reply', component: ReplyComponent },
+  { path: 'reply/:id', component: ReplyComponent },
   { path: 'postView', component: PostViewComponent },
 ];
 

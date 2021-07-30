@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg ">
+<nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <a class="navbar-brand text-white" href="/home">MedInfo</a>
     <button
@@ -10,20 +10,31 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-   <span class="text-white">
+      <span class="text-white">
         <i class="fas fa-bars"></i>
       </span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <!-- *ngIf="isAuthenticated" -->
+        <li class="nav-item">
+          <a class="nav-link active text-white" aria-current="page">
+            Hi
+            <span style="text-transform: capitalize">{{
+              user.username
+            }}</span></a
+          >
+        </li>
         <li class="nav-item">
           <a class="nav-link active text-white" aria-current="page" href="/home"
             >Home</a
           >
         </li>
+
         <li class="nav-item">
-          <a class="nav-link active text-white" aria-current="page" href="/profile"
+          <a
+            class="nav-link active text-white"
+            aria-current="page"
+            href="/profile"
             >Profile</a
           >
         </li>

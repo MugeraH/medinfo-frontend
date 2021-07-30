@@ -3,7 +3,8 @@
 <div class="container-fluid m-4">
   <div class="main-wrapper">
     <div class="post">
-      <p class="h4 text-center">Post</p>
+      <h4>Post</h4>
+      <p class="h4 mb-5">{{ post.post }}?</p>
     </div>
     <div class="form-wrapper">
       <div class="form-container">
@@ -18,46 +19,26 @@
             ></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary">Reply</button>
+          <button type="submit" class="btn btn-success">Reply</button>
         </form>
       </div>
     </div>
 
-    <div class="replies-wrapper">
-      <div class="reply-item">
-        <div class="header">date</div>
+    <div class="replies-wrapper mt-4">
+      <h3>Replies</h3>
+      <div class="reply-item" *ngFor="let reply of replies">
+        <div class="header">{{reply.date| date}}</div>
         <div class="reply-container">
           <p class="reply">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+           {{reply.reply}}
           </p>
           <div class="actions">
-            <button class="btn btn-outline-primary mr-3">Update</button>
-            <button class="btn btn-danger">Delete</button>
-          </div>
-        </div>
-      </div>
-      <div class="reply-item">
-        <div class="header">date</div>
-        <div class="reply-container">
-          <p class="reply">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
-          <div class="actions">
-            <button class="btn btn-outline-primary mr-3">Update</button>
-            <button class="btn btn-danger">Delete</button>
+            <button class="btn btn-danger" (click)="delete(reply.id)">
+              Delete
+            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- <div class="reply-container">
-        *ngFor= "let reply in replies"
-        <p class="reply">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
-        <div class="actions">
-          <button class="btn btn-outline-primary mr-3">Update</button>
-          <button class="btn btn-danger">Delete</button>
-        </div>
-      </div> -->
