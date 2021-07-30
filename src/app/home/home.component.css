@@ -1,3 +1,12 @@
+.intro-wrapper {
+  height: 80vh;
+  margin-top: 100px;
+}
+
+.intro-text {
+  margin-top: 10px;
+}
+
 .action-wrapper {
   display: flex;
 
@@ -8,6 +17,10 @@
 .action-wrapper .row {
   width: 100%;
   margin: 0 auto;
+}
+
+.btn-wrap {
+  margin-top: 30px;
 }
 
 .action-wrapper .row .col-md-4 {
@@ -30,4 +43,20 @@
   cursor: pointer;
   background: #04051d;
   color: #fff;
+}
+
+.intro-wrapper .col-md-4 {
+  text-align: center;
+}
+.intro-wrapper .col-md-4 .img {
+  height: 150px;
+}
+
+.intro-wrapper .col-md-4 .img img {
+  height: 100%;
+}
+
+.intro-wrapper .one {
+  display: flex;
+  justify-content: space-around;
 }

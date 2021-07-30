@@ -1,11 +1,16 @@
 .card-wrapper {
-  background-color: blueviolet;
+  background: #04051d;
   width: 700px;
   margin: 25px auto;
   border-radius: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+hr{
+  width: 100%;
+  padding: 1px;
+  background:black;
 }
 
 .first {

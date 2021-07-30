@@ -3,70 +3,123 @@
 <div class="container">
   <div class="form mt-4">
     <h2>Add New Drug Infromation</h2>
-    <form [formGroup]="myForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
-      <div class="form-group">
-        <label for="drug_name">Drug Name</label>
-        <input
-          type="text"
-          formControlName="drug_name"
-          class="form-control"
-          id="drug_name"
-        />
-      </div>
-      <div class="form-group">
-        <label for="description">Description</label>
-        <textarea
-          type="text"
-          formControlName="description"
-          class="form-control"
-          id="description"
-        ></textarea>
-      </div>
-      <div class="form-group">
-        <label for="usage_information">Usage Infromation</label>
-        <textarea
-          type="text"
-          formControlName="usage_information"
-          class="form-control"
-          id="usage_information"
-        ></textarea>
-      </div>
-      <div class="form-group">
-        <label for="side_effects">Side effects</label>
-        <textarea
-          type="text"
-          formControlName="side_effects"
-          class="form-control"
-          id="side_effects"
-        ></textarea>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="drug_name">Drug Name</label>
+            <input
+              type="text"
+              formControlName="drug_name"
+              class="form-control"
+              id="drug_name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="type">Type</label>
+            <input
+              type="text"
+              formControlName="type"
+              class="form-control"
+              id="type"
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea
+              type="text"
+              formControlName="description"
+              class="form-control"
+              id="description"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="usage_information">Usage Infromation</label>
+            <textarea
+              type="text"
+              formControlName="usage_information"
+              class="form-control"
+              id="usage_information"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="side_effects">Side effects</label>
+            <textarea
+              type="text"
+              formControlName="side_effects"
+              class="form-control"
+              id="side_effects"
+            ></textarea>
+          </div>
+
+          <div class="form-group form-check">
+            <input
+              type="checkbox"
+              formControlName="overCounter"
+              class="form-check-input"
+              id="overCounter"
+            />
+            <label class="form-check-label" for="overCounter"
+              >Require prescription</label
+            >
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="side_effects">Side Advice:Alcohol</label>
+            <textarea
+              type="text"
+              formControlName="sa_alcohol"
+              class="form-control"
+              id="side_effects"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="side_effects">Side Advice:Pregnancy</label>
+            <textarea
+              type="text"
+              formControlName="sa_pregnant"
+              class="form-control"
+              id="side_effects"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="side_effects">Side Advice:Breast Feeding</label>
+            <textarea
+              type="text"
+              formControlName="sa_breastFeed"
+              class="form-control"
+              id="side_effects"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="side_effects">Side Advice:Driving</label>
+            <textarea
+              type="text"
+              formControlName="sa_driving"
+              class="form-control"
+              id="side_effects"
+            ></textarea>
+          </div>
+
+          <!-- <div class="form-group">
+            <input
+              type="text"
+              formControlName="image"
+              class="form-control"
+              id="image"
+              hidden
+            />
+            <label class="btn btn-outline-light m-0" for="image"
+              >+ DrugImage</label
+            >
+          </div> -->
+        </div>
       </div>
 
-      <div class="form-group ">
-        <input
-          type="file"
-          formControlName="image"
-          class="form-control"
-          id="image"
-          hidden
-        />
-        <label class="btn btn-outline-light m-0" for="image"
-          >+ DrugImage</label
-        >
+      <div class="text-center mt-3">
+        <button type="submit" class="btn btn-success">Submit</button>
       </div>
-
-      <div class="form-group form-check">
-        <input
-          type="checkbox"
-          formControlName="overCounter"
-          class="form-check-input"
-          id="overCounter"
-        />
-        <label class="form-check-label" for="overCounter"
-          >Require prescription</label
-        >
-      </div>
-
-      <button type="submit" class="btn btn-success">Submit</button>
     </form>
   </div>
 </div>

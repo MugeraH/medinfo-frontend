@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="form mt-4">
+    <h2>Update Profile</h2>
+    <form
+      [formGroup]="myForm"
+      (ngSubmit)="onSubmit()"
+      enctype="multipart/form-data"
+    >
+      <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input
+          type="text"
+          formControlName="firstname"
+          class="form-control"
+          id="firstname"
+          [(ngModel)]="user.firstname"
+        />
+      </div>
+      <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <textarea
+          type="text"
+          class="form-control"
+          formControlName="lastname"
+          id="lastname"
+          [(ngModel)]="user.lastname"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="bio">Bio</label>
+        <textarea
+          type="text"
+          formControlName="bio"
+          class="form-control"
+          id="bio"
+          [(ngModel)]="user.bio"
+        ></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="profile_picture">Profile_picture url</label>
+        <input
+          type="text"
+          formControlName="profile_picture"
+          class="form-control"
+          id=" profile_picture"
+          [(ngModel)]="user.profile_picture"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+</div>

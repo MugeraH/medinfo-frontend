@@ -1,5 +1,6 @@
 <app-navbar></app-navbar>
 <div class="container-fluid mt-5">
+  <p class="h4 text-center">Illnesses</p>
   <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
     <div class="form-wrapper">
       <div class="input-group mb-3">
@@ -24,8 +25,11 @@
   </form>
 
   <div class="results" *ngIf="illnesses">
-    <p class="h4 text-center">Illnesses</p>
-    <div class="result" *ngFor="let illness of illnesses" (click)="viewIllness(illness.id)">
+    <div
+      class="result"
+      *ngFor="let illness of illnesses"
+      (click)="viewIllness(illness.id)"
+    >
       <p class="h4">{{ illness.illnessname }}</p>
     </div>
   </div>

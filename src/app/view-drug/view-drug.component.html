@@ -20,11 +20,40 @@
           {{ drug.usage_information }}
         </p>
       </div>
-      <div class="recommendations text-center">
-        <p class="h4">Side Effecs</p>
+      <div class="symptoms text-center">
+        <p class="h4">Usage Inforamtion</p>
         <p class="h5 m-3">
-          {{ drug.side_effects }}
+          {{ drug.usage_information }}
         </p>
+      </div>
+      <div class="recommendations text-center">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="h4">Side Effecs</p>
+            <p class="h5 m-3">
+              {{ drug.side_effects }}
+            </p>
+          </div>
+          <div class="col-md-6">
+            <p class="h4">SA: Alcohol</p>
+            <p class="h5 m-3">
+              {{ drug.side_effects }}
+            </p>
+          </div>
+          <hr>
+          <div class="col-md-6">
+            <p class="h4">SA: Breast Feeding</p>
+            <p class="h5 m-3">
+              {{ drug.side_effects }}
+            </p>
+          </div>
+          <div class="col-md-6">
+            <p class="h4">SA: Pregnancy</p>
+            <p class="h5 m-3">
+              {{ drug.side_effects }}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

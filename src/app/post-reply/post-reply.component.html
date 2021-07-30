@@ -1,1 +1,24 @@
-<p>post-reply works!</p>
+<app-navbar></app-navbar>
+<div class="container-fluid m-4 p-4">
+  <div class="main-container">
+    <h4>Post Replies</h4>
+    <div class="d-flex justify-content-between p-3">
+      <p class="post">
+        {{ post.post }}
+      </p>
+      <h6>
+        Posted: {{ post.date |date}}
+      </h6>
+    </div>
+
+    <div class="reply-container">
+      <div class="reply-wrapper" *ngFor="let reply of post_replies">
+        <h6 class="date">{{ reply.date | date }}</h6>
+        <p class="reply">
+          {{ reply.reply }}
+        </p>
+        <!-- <span class="user">Dr.{{ reply.user.username }}</span> -->
+      </div>
+    </div>
+  </div>
+</div>

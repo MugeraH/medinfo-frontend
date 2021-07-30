@@ -25,6 +25,7 @@ import { ViewDrugComponent } from './view-drug/view-drug.component';
 import { PostViewComponent } from './post-view/post-view.component';
 import { PostReplyComponent } from './post-reply/post-reply.component';
 import { ProfileComponent } from './profile/profile.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { ProfileComponent } from './profile/profile.component';
     PostViewComponent,
     PostReplyComponent,
     ProfileComponent,
+    UpdateProfileComponent,
   ],
   imports: [
     BrowserModule,

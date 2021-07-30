@@ -1,1 +1,21 @@
-<p>profile works!</p>
+<app-navbar></app-navbar>
+<div class="container mt-5 p-0">
+  <div class="row profile-container mt-5" style="margin: 0px auto; width: 70%">
+    <div class="col-md-6">
+      <div class="img-cont">
+        <img src="{{ user.profile_picture }}" alt="" />
+      </div>
+    </div>
+    <div class="col-md-6 mt-5">
+      <header>
+        <p>Username : {{ user.username }}</p>
+        <a href="" class="btn btn-outline-success" routerLink="/update_profile"
+          >Update</a
+        >
+      </header>
+      <!-- <p>{{user.profile_picture}}</p> -->
+      <p>Email: {{ user.email }}</p>
+      <p>Bio :{{ user.bio }}</p>
+    </div>
+  </div>
+</div>

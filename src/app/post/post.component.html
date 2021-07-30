@@ -26,7 +26,7 @@
         <div class="posts-wrapper mt-3">
           <h3 class="text-center">My Inquiries</h3>
           <div class="overall-post-container" *ngFor="let post of posts">
-            <div class="post">
+            <div class="post" (click)="viewReply(post.id)">
               <span class="h6">{{ post.date | date }}</span>
               <div class="post-container">
                 <div class="">

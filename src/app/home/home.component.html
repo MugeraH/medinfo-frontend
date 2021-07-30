@@ -1,35 +1,84 @@
 <app-navbar></app-navbar>
-<div class="container-fluid pt-5">
-  <div class="action-wrapper">
-    <div class="card" style="width: 18rem">
-      <div class="card-body" routerLink="/search">
-        <h5 class="card-title">Search Illness Infromation</h5>
 
-        <!-- <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p> -->
+<div class="container-fluid p-5">
+  <h3 class="text-right">Welcome {{ user.username }}</h3>
+
+  <div class="intro mt-5">
+    <h2 class="intro-text text-center p-3 mb-5">
+      MedInfo gathers information from the best medical minds and makes it
+      available for everyone
+    </h2>
+    <div class="intro-wrapper">
+      <div class="row">
+        <div class="col-md-4 one">
+          <div class="img">
+            <img class="doc" src="../../assets/images/doctor.png" alt="" />
+          </div>
+          <div class="img">
+            <img class="add" src="../../assets/images/right-arrow.png" alt="" />
+          </div>
+        </div>
+        <div class="col-md-4 one">
+          <div class="img">
+            <img src="../../assets/images/data-collection.png" alt="" />
+          </div>
+          <div class="img">
+            <img class="add" src="../../assets/images/right-arrow.png" alt="" />
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="img">
+            <img src="../../assets/images/consulting.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-wrap text-center mt-5">
+        <button class="btn btn-outline-light" (click)="scroll(target)">
+          Explore
+        </button>
       </div>
     </div>
-    <div class="card" style="width: 18rem" routerLink="/searchDrug">
-      <div class="card-body">
-        <h5 class="card-title">Search Drug information</h5>
+  </div>
 
-        <!-- <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p> -->
+  <div #target class="action-wrapper">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="img">
+          <img src="../../assets/images/malaria.png" alt="" />
+        </div>
+        <div class="card" style="width: 18rem">
+          <div class="card-body" routerLink="/search">
+            <h5 class="card-title">Search Illness Infromation</h5>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="card" style="width: 18rem" (click)="viewPost()">
-      <div class="card-body">
-        <h5 class="card-title">Ask a doctor</h5>
-
-        <!-- <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p> -->
+      <div class="col-md-4">
+        <div class="img">
+          <img src="../../assets/images/medicine.png" alt="" />
+        </div>
+        <div class="card" style="width: 18rem" routerLink="/searchDrug">
+          <div class="card-body">
+            <h5 class="card-title">Search Drug information</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="img">
+          <img src="../../assets/images/social-media.png" alt="" />
+        </div>
+        <div
+          class="card"
+          style="width: 18rem"
+          (click)="viewPost()"
+          [routerLink]="['/post']"
+          [queryParams]="{ id: user.id }"
+        >
+          <div class="card-body">
+            <h5 class="card-title">Ask a doctor</h5>
+          </div>
+        </div>
       </div>
     </div>
   </div>

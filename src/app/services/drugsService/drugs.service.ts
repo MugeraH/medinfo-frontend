@@ -18,16 +18,21 @@ export class DrugsService {
   getDrugDetail(id: any): Observable<any> {
     return this.http.get(`${baseUrl}/${id}`);
   }
-  
+
   getSearchDrugs(search_term: any): Observable<any> {
     return this.http.get(`${baseUrl}/${search_term}`);
   }
 
   addDrug(data: {
     drug_name: string;
+    type: string;
     description: string;
     usage_information: string;
     side_effects: string;
+    safety_advice_alcohol: string;
+    safety_advice_pregnancy: string;
+    safety_advice_breast_feeding: string;
+    safety_advice_driving: string;
     overCounter: boolean;
   }) {
     return this.http.post(baseUrl, data);

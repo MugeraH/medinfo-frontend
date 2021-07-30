@@ -1,5 +1,6 @@
 <app-navbar></app-navbar>
 <div class="container-fluid mt-5">
+  <p class="h4 text-center">Search Drug</p>
   <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
     <div class="form-wrapper">
       <div class="input-group mb-3">
@@ -26,7 +27,8 @@
   <div class="results" *ngIf="Drugs">
     <p class="h4 text-center">Drugs</p>
     <div class="result" *ngFor="let drug of Drugs" (click)="viewDrug(drug.id)">
-      <p class="name h4 ">{{ drug.drug_name }} </p> <p class="type h5">{{ drug.type }}</p>
+      <p class="name h4">{{ drug.drug_name }}</p>
+      <p class="type h5">{{ drug.type }}</p>
     </div>
   </div>
   <div class="results" *ngIf="noData">

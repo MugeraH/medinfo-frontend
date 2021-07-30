@@ -22,6 +22,9 @@ export class PostsService {
   getUserPost(id: any): Observable<any> {
     return this.http.get(`${baseUrl}/user/${id}`);
   }
+  getPostReply(id: any): Observable<any> {
+    return this.http.get(`${baseUrl}/reply/${id}`);
+  }
 
   addPost(data: { post: string; user: number }) {
     return this.http.post(baseUrl, data);

@@ -12,6 +12,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class PostComponent implements OnInit {
   user;
+  user_id;
   myForm: FormGroup;
   post;
   posts;
@@ -25,13 +26,13 @@ export class PostComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    let user_id = this.route.snapshot.paramMap.get('id');
+    this.user_id = this.route.snapshot.paramMap.get('id');
     this.myForm = new FormGroup({
       post: new FormControl(''),
     });
     this.getUser();
 
-    this.getUserPosts(user_id);
+    this.getUserPosts(this.user_id);
     console.log(this.posts);
   }
 
@@ -59,7 +60,9 @@ export class PostComponent implements OnInit {
       }
     );
   }
-  viewReply() {}
+  viewReply(id: any) {
+    this.redirect.navigate(['/post_reply', id]);
+  }
 
   getUserPosts(id: any) {
     this.postService.getUserPost(id).subscribe(

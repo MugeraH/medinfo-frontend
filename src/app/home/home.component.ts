@@ -48,4 +48,8 @@ export class HomeComponent implements OnInit {
     let id = this.user.id;
     this.redirect.navigate(['/post', id]);
   }
+
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({ behavior: 'smooth' });
+  }
 }
